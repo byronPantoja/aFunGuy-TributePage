@@ -1,0 +1,76 @@
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+header {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+    url('http://phillyinfluencer.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-12-at-11.46.26-PM.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 10rem;
+  word-spacing: 0.4rem;
+  letter-spacing: 0.1rem;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 10rem;
+  word-spacing: 0.4rem;
+  letter-spacing: 0.1rem;
+}
+
+#title {
+  position: absolute;
+  max-width: 114rem;
+  width: 100%;
+  top: 50%;
+  left: 10%;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+#img-caption {
+  text-align: center;
+  margin: 1rem;
+}
+
+p {
+  display: block;
+  margin: 0 auto;
+  padding: 5rem;
+}
