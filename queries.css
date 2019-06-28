@@ -1,0 +1,49 @@
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1440px) {
+	.container {
+		width: 100%;
+	}
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+	.title {
+		grid-column: start / end;
+		margin-top: 8rem;
+		font-size: 5rem;
+		font-family: 'Bungee Shade', monospace;
+		text-shadow: 1px 1px 20px rgb(0, 0, 0);
+		width: 100%;
+	}
+
+	.claw {
+		grid-column: start / end;
+		font-family: 'Charlemagne Std', Medium, monospace;
+		text-transform: uppercase;
+		font-size: 2rem;
+		max-width: 32rem;
+		color: white;
+	}
+
+	.king {
+		grid-column: start / end;
+		font-family: 'Silom', Medium, monospace;
+		text-transform: uppercase;
+		font-size: 2rem;
+		max-width: 32rem;
+		color: white;
+	}
+
+	.killer {
+		grid-column: start / end;
+		font-family: 'Avenir Next', Medium, monospace;
+		text-transform: uppercase;
+		font-size: 2rem;
+		max-width: 32rem;
+		color: white;
+	}
+
+	.contact-form {
+		width: 100%;
+	}
+}

@@ -1,76 +1,203 @@
+:root {
+	/* COLOR VARIABLES */
+	--color-primary: #b31b11;
+	--color-dark: #000;
+}
 /* ----------------------------------------------- */
 /* BASIC SETUP */
 /* ----------------------------------------------- */
-
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
 }
 
 html {
-  font-size: 62.5%;
+	box-sizing: border-box;
+	font-size: 62.5%;
+	color: var(--color-dark);
 }
 
 body {
-  background-color: #fff;
-  color: #555;
-  font-family: 'Lato', 'Arial', sans-serif;
-  font-weight: 300;
-  font-size: 2rem;
-  text-rendering: optimizeLegibility;
-  overflow-x: hidden;
-}
-
-header {
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
-    url('http://phillyinfluencer.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-12-at-11.46.26-PM.png');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  background-attachment: fixed;
-}
-
-h1 {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  color: #fff;
-  font-size: 10rem;
-  word-spacing: 0.4rem;
-  letter-spacing: 0.1rem;
-}
-
-h2 {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-size: 10rem;
-  word-spacing: 0.4rem;
-  letter-spacing: 0.1rem;
-}
-
-#title {
-  position: absolute;
-  max-width: 114rem;
-  width: 100%;
-  top: 50%;
-  left: 10%;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-#img-caption {
-  text-align: center;
-  margin: 1rem;
+	color: var(--color-dark);
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-weight: 300;
+	font-size: 2rem;
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+	background-color: var(--color-dark);
 }
 
 p {
-  display: block;
-  margin: 0 auto;
-  padding: 5rem;
+	padding-top: 2rem !important;
+}
+
+.container {
+	background-color: var(--color-dark);
+	margin: 0 auto;
+	width: 180rem;
+	max-width: 100%;
+	display: grid;
+	grid-template-rows: 100vh repeat(6, min-content);
+	grid-template-columns:
+		[start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end])
+		[end];
+}
+
+/* ----------------------------------------------- */
+/* Header */
+/* ----------------------------------------------- */
+
+.header {
+	grid-column: start / end;
+	background-image: -webkit-linear-gradient(
+			rgba(0, 0, 0, 0.2),
+			rgba(0, 0, 0, 0.1),
+			rgba(248, 248, 248, 0.1)
+		),
+		url('https://usatftw.files.wordpress.com/2018/09/ap-raptors-media-day-basketball.jpg?w=1000&h=600&crop=1');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: var(--color-dark);
+}
+
+.header-text {
+	margin-top: 0;
+	margin-bottom: 2rem;
+	color: #fff;
+	font-size: 7rem;
+	font-family: 'Bungee Shade', monospace;
+	text-shadow: 1px 1px 20px var(--color-dark);
+	text-align: center;
+	position: relative;
+	top: 70%;
+}
+
+/* ----------------------------------------------- */
+/* Main */
+/* ----------------------------------------------- */
+
+.main {
+	grid-column: start / end;
+}
+/* Section - Legendary */
+.legendary #img-caption h2 {
+	position: relative;
+	color: var(--color-primary);
+	margin-top: 0;
+	text-align: center;
+	font-size: 5rem;
+	font-family: 'Bungee', monospace;
+	padding-top: 2rem;
+	top: 10%;
+}
+
+.legendary #img-caption p {
+	position: relative;
+	color: grey;
+	margin-top: 0;
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: monospace;
+	padding: 2rem;
+}
+
+.dagger {
+	background-color: var(--color-dark);
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+/* Section - Tribute-intro */
+#tribute-intro {
+	grid-column: start / end;
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+		url('https://pbs.twimg.com/media/C-EH7dGVYAAO78W.jpg');
+	background-size: contain;
+	background-position: center;
+	height: 100%;
+	background-attachment: fixed;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	padding-top: 5rem;
+}
+
+.claw {
+	font-family: 'Charlemagne Std', Medium, monospace;
+	text-transform: uppercase;
+	font-size: 9rem;
+	color: white;
+}
+
+.king {
+	font-family: 'Silom', Medium, monospace;
+	text-transform: uppercase;
+	font-size: 9rem;
+	color: white;
+}
+
+.killer {
+	font-family: 'Avenir Next', Medium, monospace;
+	text-transform: uppercase;
+	font-size: 9rem;
+	color: white;
+}
+
+/* Section - Tribute-info */
+#tribute-info {
+	grid-column: start / end;
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+		url('https://www.washingtonpost.com/resizer/AfWUFY8uvXd2U7MzbbEfRk0JWDg=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/UJWX6QEOK4I6TNXUAMZVMUBNZY.jpg');
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+}
+
+.title {
+	grid-column: start / end;
+	margin-top: 8rem;
+	font-size: 10rem;
+	font-family: 'Bungee Shade', monospace;
+	text-shadow: 1px 1px 20px var(--color-dark);
+	width: 100%;
+}
+
+.name {
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+	font-size: 5rem;
+	font-family: 'Bungee Shade', monospace;
+	text-shadow: 1px 1px 20px var(--color-dark);
+	width: 100%;
+}
+
+.bio {
+	font-family: monospace;
+	padding: 0 5%;
+}
+
+.list {
+	display: grid;
+	grid-column: 2 /6;
+	text-align: left;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	justify-content: center;
+}
+
+/* ----------------------------------------------- */
+/* footer */
+/* ----------------------------------------------- */
+footer {
+	height: 80vh;
+}
+.kawhi-laugh {
+	width: 100%;
+	height: 100%;
 }
